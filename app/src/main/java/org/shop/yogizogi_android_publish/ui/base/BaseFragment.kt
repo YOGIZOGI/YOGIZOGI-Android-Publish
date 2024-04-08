@@ -47,12 +47,12 @@ abstract class BaseFragment<T : ViewBinding, R : BaseViewModel>(
     }
 
     /**
-     * initiate view and click event
+     * Fragment의 UI 초기화 로직을 구현
      */
     abstract fun initView()
 
     /**
-     * initiate others (ex. observe Livedata)
+     * LiveData 등 ViewModel과 관련된 옵저버를 설정
      */
     abstract fun initAfterBinding()
 }
