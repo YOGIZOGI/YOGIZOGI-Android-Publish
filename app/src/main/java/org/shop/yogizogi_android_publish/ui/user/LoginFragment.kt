@@ -7,7 +7,6 @@ import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import org.shop.yogizogi_android_publish.databinding.FragmentLoginBinding
-import org.shop.yogizogi_android_publish.model.local.UserInfo
 import org.shop.yogizogi_android_publish.ui.base.BaseFragment
 
 @AndroidEntryPoint
@@ -32,13 +31,13 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>(
     private fun observeData() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.userInfoStateFlow.collect {
-                Log.e(
-                    "유저 정보 - 로그인 후 LoginFragment",
-                    "${it.id}, ${it.firstLogInStatus}, ${it.accessToken}, ${it.refreshToken}"
-                )
-                if (it == UserInfo.getDefaultInstance() || it.accessToken.isEmpty()) {
+                if (it == null || it.accessToken.isEmpty()) {
                     Snackbar.make(requireView(), "로그인이 안됨", Snackbar.LENGTH_LONG).show()
                 } else {
+                    Log.e(
+                        "유저정보 - LoginFragment",
+                        "${it.id}, ${it.firstLogInStatus}, ${it.accessToken}, ${it.refreshToken}"
+                    )
                     findNavController().popBackStack()
                 }
             }

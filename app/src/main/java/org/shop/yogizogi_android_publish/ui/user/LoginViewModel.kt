@@ -14,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class LoginViewModel @Inject constructor(private val dataStoreManager: DataStoreManager) :
     BaseViewModel() {
-    private val _userInfoStateFlow = MutableStateFlow<UserInfo>(UserInfo.getDefaultInstance())
+    private val _userInfoStateFlow = MutableStateFlow<UserInfo?>(null)
     val userInfoStateFlow = _userInfoStateFlow.asStateFlow()
 
     fun login() {
