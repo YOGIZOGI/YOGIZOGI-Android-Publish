@@ -10,24 +10,34 @@
         android:name="org.shop.yogizogi_android_publish.ui.main.mypage.MypageFragment"
         android:label="fragment_mypage"
         tools:layout="@layout/fragment_mypage" />
+
     <fragment
         android:id="@+id/mapFragment"
         android:name="org.shop.yogizogi_android_publish.ui.main.map.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" />
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="org.shop.yogizogi_android_publish.ui.main.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home"/>
+
     <fragment
         android:id="@+id/bookmarkFragment"
         android:name="org.shop.yogizogi_android_publish.ui.main.bookmark.BookmarkFragment"
         android:label="fragment_bookmark"
         tools:layout="@layout/fragment_bookmark" />
+
     <fragment
         android:id="@+id/settingFragment"
         android:name="org.shop.yogizogi_android_publish.ui.main.setting.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="org.shop.yogizogi_android_publish.ui.user.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>
