@@ -49,5 +49,45 @@
         android:id="@+id/loginFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_phoneInputFragment"
+            app:destination="@id/phoneInputFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/phoneInputFragment"
+        android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupPhoneInputFragment"
+        android:label="fragment_phone_input"
+        tools:layout="@layout/fragment_signup_phone_input" >
+        <action
+            android:id="@+id/action_phoneInputFragment_to_signupCodeInputFragment"
+            app:destination="@id/signupCodeInputFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupCodeInputFragment"
+        android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupCodeInputFragment"
+        android:label="fragment_signup_code_input"
+        tools:layout="@layout/fragment_signup_code_input" >
+        <action
+            android:id="@+id/action_signupCodeInputFragment_to_signupTermAgreeFragment"
+            app:destination="@id/signupTermAgreeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupTermAgreeFragment"
+        android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupTermAgreeFragment"
+        android:label="fragment_signup_term_agree"
+        tools:layout="@layout/fragment_signup_term_agree" >
+        <action
+            android:id="@+id/action_signupTermAgreeFragment_to_signupPasswordInputFragment"
+            app:destination="@id/signupPasswordInputFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupPasswordInputFragment"
+        android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupPasswordInputFragment"
+        android:label="fragment_signup_password_input"
+        tools:layout="@layout/fragment_signup_password_input" />
 </navigation>
