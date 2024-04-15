@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private val mainViewModel: MainViewModel by viewModels()
 
     private val noneBnvFragment = listOf(
-        R.id.loginFragment
+        R.id.loginOptFragment
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             mainViewModel.authenticationState.collect { authState ->
                 if (authState == LoginState.NOT_LOGIN) {
-                    navController.navigate(R.id.loginFragment)
+                    navController.navigate(R.id.loginOptFragment)
                 } else if (authState == LoginState.LOGIN) {
                     navController.navigate(R.id.homeFragment)
                 }

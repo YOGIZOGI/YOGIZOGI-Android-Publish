@@ -36,6 +36,16 @@
         tools:layout="@layout/fragment_setting" />
 
     <fragment
+        android:id="@+id/loginOptFragment"
+        android:name="org.shop.yogizogi_android_publish.ui.user.LoginOptFragment"
+        android:label="fragment_login_opt"
+        tools:layout="@layout/fragment_login_opt" >
+        <action
+            android:id="@+id/action_loginFragment_to_loginFragment2"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/loginFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.LoginFragment"
         android:label="fragment_login"

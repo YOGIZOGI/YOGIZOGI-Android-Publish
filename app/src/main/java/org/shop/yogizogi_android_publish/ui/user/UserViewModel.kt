@@ -12,7 +12,7 @@ import org.shop.yogizogi_android_publish.ui.base.BaseViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class LoginViewModel @Inject constructor(private val dataStoreManager: DataStoreManager) :
+class UserViewModel @Inject constructor(private val dataStoreManager: DataStoreManager) :
     BaseViewModel() {
     private val _userInfoStateFlow = MutableStateFlow<UserInfo?>(null)
     val userInfoStateFlow = _userInfoStateFlow.asStateFlow()
