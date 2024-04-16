@@ -10,6 +10,14 @@
     <string name="bnv_bookmark">북마크</string>
     <string name="bnv_setting">설정</string>
 
+    <!-- Common -->
+    <string name="next">다음</string>
+    <string name="skip">건너뛰기</string>
+    <string name="register">등록</string>
+    <string name="location_permission_title">위치권한 요청</string>
+    <string name="location_permission_message">현재 위치정보를 얻기 위해 위치 권한이 필요합니다.</string>
+    <string name="location_permission_denied">위치권한 요청이 거절되었습니다.</string>
+
     <!-- Login -->
     <string name="login_app_description">나만의 입맛대로 맛집을 찾고 싶다면!</string>
     <string name="login_with_phone">전화번호로 로그인하기</string>
@@ -26,4 +34,39 @@
     <string name="signup">회원가입</string>
     <string name="login_complete">로그인 완료!</string>
     <string name="login_empty">전화번호 혹은 비밀번호를 확인해주세요</string>
+
+    <!-- SignUp -->
+    <string name="signup_verify_text">본인인증</string>
+    <string name="signup_phone_text1">60초면 가입완료!</string>
+    <string name="signup_phone_text2">본인인증을 위해</string>
+    <string name="signup_phone_text3">전화번호를 입력</string>
+    <string name="signup_phone_text4">해주세요</string>
+    <string name="signup_Phone_ex">ex) 01012345678</string>
+    <string name="signup_request_verify">인증요청</string>
+    <string name="signup_verify_text1">보내드린 인증번호 6자리를</string>
+    <string name="signup_verify_text2">입력해 주세요.</string>
+    <string name="verify_text">인증번호</string>
+    <string name="signup_code_not_receive">인증번호가 오지 않는다면?</string>
+    <string name="signup_code_resend">재발송</string>
+    <string name="verify_with_other_phone">다른 휴대폰 번호로 인증하기</string>
+    <string name="signup_complete">회원가입 완료!</string>
+    <string name="signup_agree">약관동의</string>
+    <string name="signup_agree_text">요기죠기 이용을 위해\n아래의 약관 동의 및 회원가입이 필요해요</string>
+    <string name="signup_agree_all">전체동의</string>
+    <string name="signup_agree_personal">(필수) 개인정보수집및이용 동의</string>
+    <string name="signup_agree_location">(필수) 사용자위치정보이용 동의</string>
+    <string name="signup_agree_marketing">(선택) 광고성정보수신 동의</string>
+    <string name="signup_password_text1">사용하실 비밀번호</string>
+    <string name="signup_password_text2">를 입력해주세요</string>
+    <string name="signup_password_helper">조건: 알파벳 7자 이상, 특수문자 포함</string>
+    <string name="signup_password_check_text1">한번 더&#160;</string>
+    <string name="signup_password_check_text2">를 입력해주세요</string>
+
+    <!-- SignUp Error -->
+    <string name="signup_error_default">전화번호 형식이 맞지 않습니다.</string>
+    <string name="signup_error_button">전화번호를 확인해주세요.</string>
+    <string name="signup_error_code">인증번호를 확인해주세요.</string>
+    <string name="signup_error_password">비밀번호를 확인해주세요</string>
+    <string name="signup_error_password_check">비밀번호가 동일하지 않습니다.</string>
+    <string name="signup_error_agree">필수 동의 사항을 모두 체크해주세요.</string>
 </resources>

@@ -89,5 +89,15 @@
         android:id="@+id/signupPasswordInputFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupPasswordInputFragment"
         android:label="fragment_signup_password_input"
-        tools:layout="@layout/fragment_signup_password_input" />
+        tools:layout="@layout/fragment_signup_password_input" >
+        <action
+            android:id="@+id/action_signupPasswordInputFragment_to_signupPasswordCheckFragment"
+            app:destination="@id/signupPasswordCheckFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupPasswordCheckFragment"
+        android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupPasswordCheckFragment"
+        android:label="fragment_signup_password_check"
+        tools:layout="@layout/fragment_signup_password_check" />
 </navigation>
