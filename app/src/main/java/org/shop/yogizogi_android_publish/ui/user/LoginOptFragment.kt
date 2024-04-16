@@ -46,7 +46,7 @@ class LoginOptFragment : BaseFragment<FragmentLoginOptBinding, UserViewModel>(
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.userInfoStateFlow.collect {
                 if (it == null || it.accessToken.isEmpty()) {
-                    Snackbar.make(requireView(), "로그인이 안됨", Snackbar.LENGTH_LONG).show()
+                    Snackbar.make(requireView(), "로그인이 안됨", Snackbar.LENGTH_SHORT).show()
                 } else {
                     Log.e(
                         "유저정보 - LoginFragment",
