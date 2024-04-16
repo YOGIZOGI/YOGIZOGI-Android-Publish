@@ -61,8 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="phone"
-            android:maxLines="1"
-            app:text="@{viewModel.phoneNumber}" />
+            android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -96,8 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
-            android:maxLines="1"
-            app:text="@{viewModel.password}" />
+            android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -105,9 +103,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
+        android:padding="10dp"
         android:text="@string/login_find_password"
         android:textSize="11sp"
-        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="@id/layout_password_input"
         app:layout_constraintTop_toBottomOf="@id/layout_password_input" />
 
@@ -136,11 +134,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="43dp"
         android:layout_marginTop="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="40dp"
         android:layout_marginEnd="43dp"
+        android:layout_marginBottom="40dp"
         android:orientation="horizontal"
         android:weightSum="7"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_auto_login">

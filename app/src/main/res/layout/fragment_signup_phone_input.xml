@@ -66,10 +66,10 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
         android:src="@drawable/ic_signup_phone"
         app:layout_constraintBottom_toBottomOf="@id/tv_text_4"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="30dp"
         app:layout_constraintTop_toTopOf="@id/tv_text_1" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -92,8 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="phone"
-            android:maxLines="1"
-            app:text="@{viewModel.phoneNumber}" />
+            android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton

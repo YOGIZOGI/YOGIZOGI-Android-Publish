@@ -1,5 +1,6 @@
 package org.shop.yogizogi_android_publish.ui.user
 
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import org.shop.yogizogi_android_publish.databinding.FragmentLoginBinding
 import org.shop.yogizogi_android_publish.ui.base.BaseFragment
@@ -10,10 +11,34 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, UserViewModel>(
     UserViewModel::class.java
 ) {
     override fun initView() {
-
+        initLoginBtn()
+        initSignupBtn()
+        initFindPasswordBtn()
     }
 
     override fun initAfterBinding() {
 
+    }
+
+    private fun initLoginBtn() {
+        binding.loginBottomsheet.btnLogin.setOnClickListener {
+
+        }
+    }
+
+    private fun initSignupBtn() {
+        binding.loginBottomsheet.btnSignup.setOnClickListener {
+            navigateToSignupPhone()
+        }
+    }
+
+    private fun initFindPasswordBtn() {
+        binding.loginBottomsheet.tvFindPassword.setOnClickListener {
+
+        }
+    }
+
+    private fun navigateToSignupPhone() {
+        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToPhoneInputFragment())
     }
 }

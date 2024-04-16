@@ -21,7 +21,7 @@
         android:id="@+id/homeFragment"
         android:name="org.shop.yogizogi_android_publish.ui.main.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/bookmarkFragment"
@@ -39,9 +39,9 @@
         android:id="@+id/loginOptFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.LoginOptFragment"
         android:label="fragment_login_opt"
-        tools:layout="@layout/fragment_login_opt" >
+        tools:layout="@layout/fragment_login_opt">
         <action
-            android:id="@+id/action_loginFragment_to_loginFragment2"
+            android:id="@+id/action_loginOptFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 
@@ -49,17 +49,17 @@
         android:id="@+id/loginFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_phoneInputFragment"
-            app:destination="@id/phoneInputFragment" />
+            app:destination="@id/signupPhoneInputFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/phoneInputFragment"
+        android:id="@+id/signupPhoneInputFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupPhoneInputFragment"
         android:label="fragment_phone_input"
-        tools:layout="@layout/fragment_signup_phone_input" >
+        tools:layout="@layout/fragment_signup_phone_input">
         <action
             android:id="@+id/action_phoneInputFragment_to_signupCodeInputFragment"
             app:destination="@id/signupCodeInputFragment" />
@@ -69,7 +69,7 @@
         android:id="@+id/signupCodeInputFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupCodeInputFragment"
         android:label="fragment_signup_code_input"
-        tools:layout="@layout/fragment_signup_code_input" >
+        tools:layout="@layout/fragment_signup_code_input">
         <action
             android:id="@+id/action_signupCodeInputFragment_to_signupTermAgreeFragment"
             app:destination="@id/signupTermAgreeFragment" />
@@ -79,7 +79,7 @@
         android:id="@+id/signupTermAgreeFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupTermAgreeFragment"
         android:label="fragment_signup_term_agree"
-        tools:layout="@layout/fragment_signup_term_agree" >
+        tools:layout="@layout/fragment_signup_term_agree">
         <action
             android:id="@+id/action_signupTermAgreeFragment_to_signupPasswordInputFragment"
             app:destination="@id/signupPasswordInputFragment" />
@@ -89,7 +89,7 @@
         android:id="@+id/signupPasswordInputFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupPasswordInputFragment"
         android:label="fragment_signup_password_input"
-        tools:layout="@layout/fragment_signup_password_input" >
+        tools:layout="@layout/fragment_signup_password_input">
         <action
             android:id="@+id/action_signupPasswordInputFragment_to_signupPasswordCheckFragment"
             app:destination="@id/signupPasswordCheckFragment" />
@@ -99,5 +99,11 @@
         android:id="@+id/signupPasswordCheckFragment"
         android:name="org.shop.yogizogi_android_publish.ui.user.signup.SignupPasswordCheckFragment"
         android:label="fragment_signup_password_check"
-        tools:layout="@layout/fragment_signup_password_check" />
+        tools:layout="@layout/fragment_signup_password_check">
+        <action
+            android:id="@+id/action_signupPasswordCheckFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

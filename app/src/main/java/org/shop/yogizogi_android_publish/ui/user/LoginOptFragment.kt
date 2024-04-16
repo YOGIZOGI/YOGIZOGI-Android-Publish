@@ -15,15 +15,31 @@ class LoginOptFragment : BaseFragment<FragmentLoginOptBinding, UserViewModel>(
     UserViewModel::class.java
 ) {
     override fun initView() {
-
+        initPhoneLogin()
+        initKakaoLogin()
+        initNaverLogin()
     }
 
     override fun initAfterBinding() {
         observeData()
     }
 
-    private fun initLoginBtn() {
+    private fun initPhoneLogin() {
+        binding.btnPhoneLogin.setOnClickListener {
+            navigateToLoginFragment()
+        }
+    }
 
+    private fun initKakaoLogin() {
+
+    }
+
+    private fun initNaverLogin() {
+
+    }
+
+    private fun navigateToLoginFragment() {
+        findNavController().navigate(LoginOptFragmentDirections.actionLoginOptFragmentToLoginFragment())
     }
 
     private fun observeData() {
