@@ -13,6 +13,22 @@
     <!-- Profile -->
     <string name="profile_nickname_fragment_title">환영합니다!\n사용하실 닉네임을 알려주세요</string>
     <string name="profile_nickname_fragment_btn">다음</string>
+    <string name="profile_tag_request_tag_title">님을 표현하는\n태그를 선택해주세요</string>
+    <string name="profile_tag_btn1">#매운맛 개강자</string>
+    <string name="profile_tag_btn2">#먹잘알</string>
+    <string name="profile_tag_btn3">#맛집 투어러</string>
+    <string name="profile_tag_btn4">#초딩 입맛</string>
+    <string name="profile_tag_btn5">#단게 좋아</string>
+    <string name="profile_tag_btn6">#민초 사랑</string>
+    <string name="profile_tag_btn7">#매운맛 개강자</string>
+    <string name="profile_tag_btn8">#먹잘알</string>
+    <string name="profile_tag_btn9">#맛집 투어러</string>
+    <string name="profile_tag_btn10">#매운맛 개강자</string>
+    <string name="profile_tag_btn11">#먹잘알</string>
+    <string name="profile_tag_btn12">#맛집 투어러</string>
+    <string name="profile_tag_request_taste">님은\n어떤 맛을 선호하시나요?</string>
+
+
 
     <!-- Common -->
     <string name="next">다음</string>
