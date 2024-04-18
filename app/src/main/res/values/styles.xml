@@ -8,4 +8,20 @@
         <item name="android:layout_height">36dp</item>
     </style>
 
+    <style name="tasteTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="slider_style">
+        <item name="android:valueFrom">20.0</item>
+        <item name="android:valueTo">100.0</item>
+        <item name="android:stepSize">5</item>
+
+
+    </style>
+
 </resources>

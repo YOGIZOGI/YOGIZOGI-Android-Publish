@@ -26,7 +26,18 @@
     <string name="profile_tag_btn10">#매운맛 개강자</string>
     <string name="profile_tag_btn11">#먹잘알</string>
     <string name="profile_tag_btn12">#맛집 투어러</string>
-    <string name="profile_tag_request_taste">님은\n어떤 맛을 선호하시나요?</string>
+    <string name="profile_taste_request_taste">님은\n어떤 맛을 선호하시나요?</string>
+    <string name="profile_taste_taste_hot">매운 맛</string>
+    <string name="profile_taste_taste_sweet">단 맛</string>
+    <string name="profile_taste_taste_salty">짠 맛</string>
+    <string name="profile_taste_non_like">비선호</string>
+    <string name="profile_taste_like">선호</string>
+    <string name="profile_taste_explain">사람마다 음식에 대한 맛 기준이 다릅니다.\n\n같은 김치찌개를 먹어도 짤 수도,달 수도
+        매울수도 있습니다.\n\n선호하는 맛을 설정하실 때,\n디저트가 아닌 식사하실 때를 기준으로 설정해주세요.\n\n
+        ex)나는 케이크를 좋아한다 -> 단 맛 선호설정(X)\n나는 김치찌개가 달짝지근한게 좋다 -> 단 맛 선호설정(O)
+        나는 불닭볶음면도 별로 안 맵다 -> 매운 맛 잘먹음 설정(O)\n나는 불닭볶음면을 좋아하지만 너무 맵다 -> 잘 먹음 설정(X)
+    </string>
+
 
 
 

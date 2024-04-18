@@ -16,7 +16,8 @@ class ProfileTagFragment : BaseFragment<FragmentProfileTagBinding, ProfileViewMo
     }
 
     override fun initAfterBinding() {
-
+        // TODO : viewModel 에서 사용자 이름과 이미지 불러오기
+        // TODO : button 선택 시 viewModel에 태그 데이터 넣기
     }
 
     private fun initNextButton() {

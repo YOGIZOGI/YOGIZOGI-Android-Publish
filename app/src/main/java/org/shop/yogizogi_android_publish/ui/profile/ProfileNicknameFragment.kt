@@ -16,7 +16,7 @@ class ProfileNicknameFragment : BaseFragment<FragmentProfileNicknameBinding, Pro
     }
 
     override fun initAfterBinding() {
-        // TODO
+        // TODO : 프로필 이미지 변경할 수 있도록 Setting
     }
 
 
