@@ -9,4 +9,8 @@
     <string name="bnv_setting">설정</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Profile -->
+    <string name="profile_nickname_fragment_title">환영합니다!\n사용하실 닉네임을 알려주세요</string>
+    <string name="profile_nickname_fragment_btn">다음</string>
 </resources>

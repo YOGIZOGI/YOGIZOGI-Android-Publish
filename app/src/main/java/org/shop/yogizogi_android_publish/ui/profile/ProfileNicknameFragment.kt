@@ -14,6 +14,6 @@ class ProfileNicknameFragment : BaseFragment<FragmentProfileNicknameBinding, Pro
     }
 
     override fun initAfterBinding() {
-
+        // TODO
     }
 }
