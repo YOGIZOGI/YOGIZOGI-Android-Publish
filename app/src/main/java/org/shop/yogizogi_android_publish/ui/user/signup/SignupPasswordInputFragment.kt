@@ -22,7 +22,12 @@ class SignupPasswordInputFragment : BaseFragment<FragmentSignupPasswordInputBind
     }
 
     private fun initToolbar() {
-        binding.includedToolbar.layoutTvTitle.text = resources.getText(R.string.signup)
+        with(binding) {
+            binding.includedToolbar.layoutTvTitle.text = resources.getText(R.string.signup)
+            includedToolbar.layoutBtnBack.setOnClickListener {
+                findNavController().popBackStack()
+            }
+        }
     }
 
     private fun initPasswordCheck() {

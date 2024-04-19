@@ -22,7 +22,12 @@ class SignupCodeInputFragment : BaseFragment<FragmentSignupCodeInputBinding, Use
     }
 
     private fun initToolbar() {
-        binding.includedToolbar.layoutTvTitle.text = resources.getText(R.string.verify_text)
+        with(binding) {
+            includedToolbar.layoutTvTitle.text = resources.getText(R.string.verify_text)
+            includedToolbar.layoutBtnBack.setOnClickListener {
+                findNavController().popBackStack()
+            }
+        }
     }
 
     private fun initRequestCodeCheck() {
