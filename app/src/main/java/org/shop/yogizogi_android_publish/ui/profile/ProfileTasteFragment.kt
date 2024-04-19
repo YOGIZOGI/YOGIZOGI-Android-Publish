@@ -25,9 +25,7 @@ class ProfileTasteFragment : BaseFragment<FragmentProfileTasteBinding, ProfileVi
 
     private fun initBackBtn() {
         binding.includedToolbar.layoutBtnBack.setOnClickListener {
-            findNavController().navigate(
-                ProfileTasteFragmentDirections.actionProfileTasteFragmentToProfileTagFragment()
-            )
+            findNavController().popBackStack()
         }
     }
 
