@@ -31,7 +31,12 @@ class LoginOptFragment : BaseFragment<FragmentLoginOptBinding, UserViewModel>(
     }
 
     private fun initKakaoLogin() {
-
+        // TODO : 임시
+        binding.tvLoginKakao.setOnClickListener {
+            findNavController().navigate(
+                LoginOptFragmentDirections.actionLoginOptFragmentToProfileNicknameFragment()
+            )
+        }
     }
 
     private fun initNaverLogin() {

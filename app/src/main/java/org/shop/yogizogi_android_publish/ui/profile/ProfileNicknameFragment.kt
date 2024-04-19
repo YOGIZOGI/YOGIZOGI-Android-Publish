@@ -13,6 +13,8 @@ class ProfileNicknameFragment : BaseFragment<FragmentProfileNicknameBinding, Pro
 ) {
     override fun initView() {
         initNextBtn()
+        initBackBtn()
+
     }
 
     override fun initAfterBinding() {
@@ -23,12 +25,15 @@ class ProfileNicknameFragment : BaseFragment<FragmentProfileNicknameBinding, Pro
     private fun initNextBtn() {
         binding.btnNext.setOnClickListener {
             // TODO : 닉네밍 비었을 때 예외 처리, 닉네임 중복 처리
-
+            navigateToProfileTag()
         }
     }
 
     private fun initBackBtn() {
         // TODO : Fragment 이동
+        binding.includedToolbar.layoutBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun navigateToProfileTag() {

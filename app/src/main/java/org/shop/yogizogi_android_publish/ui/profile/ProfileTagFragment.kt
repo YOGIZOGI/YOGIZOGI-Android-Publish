@@ -12,12 +12,18 @@ class ProfileTagFragment : BaseFragment<FragmentProfileTagBinding, ProfileViewMo
 ) {
     override fun initView() {
         initNextButton()
-        initJumpButton()
+        initBackButton()
     }
 
     override fun initAfterBinding() {
         // TODO : viewModel 에서 사용자 이름과 이미지 불러오기
         // TODO : button 선택 시 viewModel에 태그 데이터 넣기
+    }
+
+    private fun initBackButton() {
+        binding.includedToolbar.layoutBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun initNextButton() {
@@ -28,12 +34,5 @@ class ProfileTagFragment : BaseFragment<FragmentProfileTagBinding, ProfileViewMo
         }
     }
 
-    private fun initJumpButton() {
-        binding.btnJump.setOnClickListener {
-            // TODO 홈 화면으로 이동
-            findNavController().navigate(
-                ProfileTagFragmentDirections.actionProfileTagFragmentToHomeFragment()
-            )
-        }
-    }
+
 }

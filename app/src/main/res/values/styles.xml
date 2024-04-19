@@ -17,9 +17,10 @@
     </style>
 
     <style name="slider_style">
-        <item name="android:valueFrom">20.0</item>
-        <item name="android:valueTo">100.0</item>
-        <item name="android:stepSize">5</item>
+        <item name="android:valueFrom">0.0</item>
+        <item name="android:valueTo">5.0</item>
+        <item name="android:stepSize">1.0</item>
+        <item name="labelStyle">@null</item>
 
 
     </style>
