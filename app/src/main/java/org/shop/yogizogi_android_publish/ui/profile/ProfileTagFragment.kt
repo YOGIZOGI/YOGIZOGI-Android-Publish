@@ -13,6 +13,7 @@ class ProfileTagFragment : BaseFragment<FragmentProfileTagBinding, ProfileViewMo
     override fun initView() {
         initNextButton()
         initBackButton()
+        initJumpButton()
     }
 
     override fun initAfterBinding() {
@@ -28,11 +29,20 @@ class ProfileTagFragment : BaseFragment<FragmentProfileTagBinding, ProfileViewMo
 
     private fun initNextButton() {
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(
-                ProfileTagFragmentDirections.actionProfileTagFragmentToProfileTasteFragment()
-            )
+            navigateToTasteFragment()
         }
     }
 
 
+    private fun initJumpButton() {
+        binding.btnJump.setOnClickListener {
+            navigateToTasteFragment()
+        }
+    }
+
+    private fun navigateToTasteFragment() {
+        findNavController().navigate(
+            ProfileTagFragmentDirections.actionProfileTagFragmentToProfileTasteFragment()
+        )
+    }
 }
