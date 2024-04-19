@@ -11,6 +11,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, UserViewModel>(
     UserViewModel::class.java
 ) {
     override fun initView() {
+        initBackBtn()
         initLoginBtn()
         initSignupBtn()
         initFindPasswordBtn()
@@ -18,6 +19,12 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, UserViewModel>(
 
     override fun initAfterBinding() {
 
+    }
+
+    private fun initBackBtn() {
+        binding.loginBottomsheet.ivBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun initLoginBtn() {

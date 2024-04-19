@@ -22,7 +22,12 @@ class SignupTermAgreeFragment : BaseFragment<FragmentSignupTermAgreeBinding, Use
     }
 
     private fun initToolbar() {
-        binding.includedToolbar.layoutTvTitle.text = resources.getText(R.string.signup_agree)
+        with(binding) {
+            binding.includedToolbar.layoutTvTitle.text = resources.getText(R.string.signup_agree)
+            includedToolbar.layoutBtnBack.setOnClickListener {
+                findNavController().popBackStack()
+            }
+        }
     }
 
     private fun initPasswordInput() {
