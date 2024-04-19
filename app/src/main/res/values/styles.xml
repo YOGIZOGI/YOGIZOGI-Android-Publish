@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="tagButtonStyle">
+        <item name="android:background">@drawable/background_tag_r50</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_height">36dp</item>
+    </style>
+
+    <style name="tasteTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="slider_style">
+        <item name="android:valueFrom">0.0</item>
+        <item name="android:valueTo">5.0</item>
+        <item name="android:stepSize">1.0</item>
+        <item name="labelStyle">@null</item>
+
+
+    </style>
+
+</resources>

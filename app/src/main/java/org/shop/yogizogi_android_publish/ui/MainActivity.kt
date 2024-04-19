@@ -25,7 +25,11 @@ class MainActivity : AppCompatActivity() {
         R.id.signupCodeInputFragment,
         R.id.signupTermAgreeFragment,
         R.id.signupPasswordInputFragment,
-        R.id.signupPasswordCheckFragment
+        R.id.signupPasswordCheckFragment,
+        R.id.profileNicknameFragment,
+        R.id.profileTagFragment,
+        R.id.profileTasteFragment,
+
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

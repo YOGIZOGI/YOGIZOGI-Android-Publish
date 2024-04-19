@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37302F">
+
+    <include
+        android:id="@+id/included_toolbar"
+        layout="@layout/layout_toolbar"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_text_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="46.5dp"
+        android:text="@string/profile_nickname_fragment_title"
+        android:textColor="@color/white"
+        android:lineSpacingExtra="3sp"
+        android:translationY="-3sp"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/included_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/included_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_user_img"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="47dp"
+        android:background="@drawable/background_user_profile"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_text_1"
+        app:srcCompat="@drawable/default_user_image" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_edit_user_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/main_yellow"
+        android:src="@drawable/picture"
+        app:fabCustomSize="40dp"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="@id/iv_user_img"
+        app:layout_constraintEnd_toEndOf="@id/iv_user_img" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_user_nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-57dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="-57dp"
+        android:backgroundTint="@color/light_gray"
+        android:textColor="@color/light_gray"
+        android:textCursorDrawable="@drawable/drawable_edittext_cursor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_user_img"
+        app:layout_constraintStart_toStartOf="@id/iv_user_img"
+        app:layout_constraintTop_toBottomOf="@id/iv_user_img" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="65dp"
+        android:textSize="16sp"
+        android:background="@drawable/background_next_btn"
+        android:gravity="center"
+        android:text="@string/profile_nickname_fragment_btn"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
