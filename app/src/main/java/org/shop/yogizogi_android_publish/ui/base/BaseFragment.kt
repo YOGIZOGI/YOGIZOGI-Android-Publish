@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
@@ -55,4 +56,8 @@ abstract class BaseFragment<T : ViewBinding, R : BaseViewModel>(
      * LiveData 등 ViewModel과 관련된 옵저버를 설정
      */
     abstract fun initAfterBinding()
+
+    fun showToastMessage(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    }
 }

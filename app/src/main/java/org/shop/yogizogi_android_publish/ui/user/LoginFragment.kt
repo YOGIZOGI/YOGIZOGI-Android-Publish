@@ -29,7 +29,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, UserViewModel>(
 
     private fun initLoginBtn() {
         binding.loginBottomsheet.btnLogin.setOnClickListener {
-
+            navigateToProfileNickname()
         }
     }
 
@@ -47,5 +47,9 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, UserViewModel>(
 
     private fun navigateToSignupPhone() {
         findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToPhoneInputFragment())
+    }
+
+    private fun navigateToProfileNickname() {
+        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToProfileNicknameFragment())
     }
 }

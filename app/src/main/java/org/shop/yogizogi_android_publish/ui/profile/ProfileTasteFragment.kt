@@ -12,6 +12,7 @@ class ProfileTasteFragment : BaseFragment<FragmentProfileTasteBinding, ProfileVi
 ) {
     override fun initView() {
         initBackBtn()
+        registerUser()
     }
 
     override fun initAfterBinding() {
@@ -31,7 +32,13 @@ class ProfileTasteFragment : BaseFragment<FragmentProfileTasteBinding, ProfileVi
 
     private fun registerUser() {
         binding.btnRegister.setOnClickListener {
+            viewModel.login()
             // TODO 등록
+            navigateToHome()
         }
+    }
+
+    private fun navigateToHome() {
+        findNavController().navigate(ProfileTasteFragmentDirections.actionProfileTasteFragmentToHomeFragment())
     }
 }

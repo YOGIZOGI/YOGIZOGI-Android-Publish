@@ -1,9 +1,12 @@
 package org.shop.yogizogi_android_publish.ui.user.signup
 
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import org.shop.yogizogi_android_publish.R
 import org.shop.yogizogi_android_publish.databinding.FragmentSignupPhoneInputBinding
+import org.shop.yogizogi_android_publish.model.Resource
 import org.shop.yogizogi_android_publish.ui.base.BaseFragment
 import org.shop.yogizogi_android_publish.ui.user.UserViewModel
 
@@ -15,6 +18,7 @@ class SignupPhoneInputFragment : BaseFragment<FragmentSignupPhoneInputBinding, U
     override fun initView() {
         initToolbar()
         initRequestCode()
+        observeViewModel()
     }
 
     override fun initAfterBinding() {
@@ -32,7 +36,29 @@ class SignupPhoneInputFragment : BaseFragment<FragmentSignupPhoneInputBinding, U
 
     private fun initRequestCode() {
         binding.btnRequest.setOnClickListener {
-            navigateToSignupCode()
+            val phoneNumber = binding.tilEtPhonenum.text.toString()
+            viewModel.getVerifyCode(phoneNumber)
+        }
+    }
+
+    private fun observeViewModel() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.phoneNumberStateFlow.collect { result ->
+                when (result) {
+                    is Resource.Loading -> {
+                        binding.progressBar.progress
+                    }
+
+                    is Resource.Success -> {
+                        showToastMessage(result.data.description)
+                        navigateToSignupCode()
+                    }
+
+                    is Resource.Error -> {
+
+                    }
+                }
+            }
         }
     }
 

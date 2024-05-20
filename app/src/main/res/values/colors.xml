@@ -13,4 +13,5 @@
     <color name="light_yellow">#FFD959</color>
     <color name="hot_taste_track_color">#EF3F54</color>
     <color name="salty_taste_track_color">#26E2CC</color>
+    <color name="trans_black">#12000000</color>
 </resources>

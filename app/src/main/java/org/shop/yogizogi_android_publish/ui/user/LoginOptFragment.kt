@@ -1,9 +1,10 @@
 package org.shop.yogizogi_android_publish.ui.user
 
+import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import org.shop.yogizogi_android_publish.databinding.FragmentLoginOptBinding
@@ -14,7 +15,10 @@ class LoginOptFragment : BaseFragment<FragmentLoginOptBinding, UserViewModel>(
     FragmentLoginOptBinding::inflate,
     UserViewModel::class.java
 ) {
+
     override fun initView() {
+        viewModel.getUserInfo()
+
         initPhoneLogin()
         initKakaoLogin()
         initNaverLogin()
@@ -44,17 +48,19 @@ class LoginOptFragment : BaseFragment<FragmentLoginOptBinding, UserViewModel>(
 
     private fun observeData() {
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.userInfoStateFlow.collect {
-                if (it == null || it.accessToken.isEmpty()) {
-                    Snackbar.make(requireView(), "로그인이 안됨", Snackbar.LENGTH_SHORT).show()
-                } else {
-                    Log.e(
-                        "유저정보 - LoginFragment",
-                        "${it.id}, ${it.firstLogInStatus}, ${it.accessToken}, ${it.refreshToken}"
-                    )
-                    findNavController().popBackStack()
-                }
-            }
+//            viewModel.userInfoStateFlow.collect { userInfo ->
+//                Log.e("LoginOpt userInfo", userInfo.toString())
+//                if (userInfo == null || userInfo.accessToken.isEmpty()) {
+//                    Log.e("LoginOpt userInfo null", userInfo.toString())
+//                    Toast.makeText(requireActivity(), "로그인이 안됨", Toast.LENGTH_SHORT).show()
+//                } else {
+//                    Log.e(
+//                        "유저정보 - LoginFragment",
+//                        "${userInfo.id}, ${userInfo.firstLogInStatus}, ${userInfo.accessToken}, ${userInfo.refreshToken}"
+//                    )
+//                    findNavController().popBackStack()
+//                }
+//            }
         }
     }
 }

@@ -1,6 +1,7 @@
 package org.shop.yogizogi_android_publish.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -38,8 +39,8 @@ class MainActivity : AppCompatActivity() {
             setContentView(it.root)
         }
 
-        initBottomNavigationView()
         observeAuthenticationState()
+        initBottomNavigationView()
     }
 
     private fun initBottomNavigationView() {
@@ -61,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             (supportFragmentManager.findFragmentById(R.id.fragment_container_main) as NavHostFragment).navController
         lifecycleScope.launch {
             mainViewModel.authenticationState.collect { authState ->
+                Log.d("Main authState", authState.toString())
                 if (authState == LoginState.NOT_LOGIN) {
                     navController.navigate(R.id.loginOptFragment)
                 } else if (authState == LoginState.LOGIN) {
